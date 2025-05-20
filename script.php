@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * @author Martín Ramonda
+ * @version 1.0
+ * Función para validar el email recibido del servidor.
+ * @return Nada. Solo comprueba que funcione
+ */
 function procesarEmailFormulario() {
     $email = $_POST['email'] ?? '';
     if($email){
@@ -8,6 +15,9 @@ function procesarEmailFormulario() {
     }
 }
 
+/**
+ * Si el formulario ha sido recibido por POST, se lanza la funcion 
+ */
 if($_SERVER["REQUEST_METHOD"] == 'POST') {
     procesarEmailFormulario();
 }
